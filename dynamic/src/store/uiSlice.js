@@ -2,10 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const intialUiState = {
   hero: {
-    isLoading: false,
+    isLoading: true,
     currentIndex: 1,
     hasClicked: false,
-    loadedVideos: 0,
+    loadedVideos: 1,
   },
 };
 
