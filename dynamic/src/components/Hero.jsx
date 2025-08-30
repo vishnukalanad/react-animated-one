@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { heroActions } from "../store/uiSlice";
+import { uiActions } from "../store/uiSlice";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
@@ -13,7 +13,7 @@ const Hero = () => {
   const totalVideos = 4;
   const nextVidoRef = useRef(null);
 
-  const heroAction = heroActions;
+  const heroAction = uiActions;
   const dispatch = useDispatch();
 
   function handleMiniVidClick() {
@@ -23,7 +23,7 @@ const Hero = () => {
 
   const state = useSelector((state) => {
     // console.log(state);
-    return state.hero.hero;
+    return state.ui.hero;
   });
 
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;

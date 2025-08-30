@@ -7,9 +7,13 @@ const intialUiState = {
     hasClicked: false,
     loadedVideos: 1,
   },
+  nav: {
+    isAudioPlaying: false,
+    isIndicatorActive: false,
+  },
 };
 
-const heroSlice = createSlice({
+const uiSlice = createSlice({
   name: "hero",
   initialState: intialUiState,
   reducers: {
@@ -30,9 +34,13 @@ const heroSlice = createSlice({
       );
       state.hero.currentIndex = (state.hero.currentIndex % action.payload) + 1;
     },
+    setAudioPlaying: (state, action) => {
+      state.nav.isAudioPlaying = action;
+    },
   },
 });
 
-export const heroActions = heroSlice.actions;
 
-export default heroSlice;
+export const uiActions = uiSlice.actions;
+
+export default uiSlice;

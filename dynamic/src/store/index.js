@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import heroSlice from "./uiSlice";
+import uiSlice from "./uiSlice";
 
 const store = configureStore({
   reducer: {
-    hero: heroSlice.reducer,
+    ui: uiSlice.reducer,
   },
 });
 
